@@ -4,8 +4,8 @@
 
 //----------------------------------------------------------------------------------------
 
-#ifndef ARDUINO_GIGA
-  #error This sketch runs on an Arduino Giga R1 board
+#if !defined(ARDUINO_PORTENTA_H7_M4) && !defined(ARDUINO_PORTENTA_H7_M7)
+  #error This sketch runs on an Arduino Portenta H7 board
 #endif
 
 //----------------------------------------------------------------------------------------
