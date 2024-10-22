@@ -13,20 +13,20 @@
 //    FDCAN2_RX : PB5 (default), PB12
 //    FDCAN2_TX : PB6, PB13 (default)
 //----------------------------------------------------------------------------------------
-//   FDCAN1
+//   FDCAN1 --- the only available canfd controller on portenta h7
 //----------------------------------------------------------------------------------------
-/*
+///*
 const std::initializer_list <ACANFD_GIGA_R1::PinPort> FDCAN1_TX_PIN_ARRAY = {
-  {PB_9,  9}, // Tx Pin: PB_9, AF9
   {PH_13, 9}  // Tx Pin: PH_13, AF9
+  //,{PB_9,  9} // Tx Pin: PB_9, AF9 --- not available on portenta h7
 } ;
 
 //----------------------------------------------------------------------------------------
 
 const std::initializer_list <ACANFD_GIGA_R1::PinPort> FDCAN1_RX_PIN_ARRAY = {
-  {PB_8,  9}, // Rx Pin: PB_9, AF9
-  {PH_14, 9}, // Tx Pin: PH_14, AF9
-  {PI_9,  9}  // Tx Pin: PI_9, AF9
+  {PB_8,  9} // Rx Pin: PB_9, AF9
+  //,{PH_14, 9}, // Tx Pin: PH_14, AF9 --- not available on portenta h7
+ // {PI_9,  9}  // Tx Pin: PI_9, AF9 --- not available on portenta h7
 } ;
 
 //----------------------------------------------------------------------------------------
@@ -66,21 +66,21 @@ void ACAN_FDCAN1_IT0_IRQHandler (void) {
 void ACAN_FDCAN1_IT1_IRQHandler (void) {
   fdcan1.isr1 () ;
 }
-*/
+//*/
 //----------------------------------------------------------------------------------------
-//   FDCAN2
+//   FDCAN2 --- do not use
 //----------------------------------------------------------------------------------------
-
+///*
 const std::initializer_list <ACANFD_GIGA_R1::PinPort> FDCAN2_TX_PIN_ARRAY = {
-  {PH_13, 9}, // Tx Pin: PB_13, AF9
-  //{PB_6,  9}  // Tx Pin: PB_6, AF9
+  {PH_13, 9} // Tx Pin: PB_13, AF9
+  //,{PH_13,  9}  // Tx Pin: PB_6, AF9 --- not available on portenta h7
 } ;
 
 //----------------------------------------------------------------------------------------
 
 const std::initializer_list <ACANFD_GIGA_R1::PinPort> FDCAN2_RX_PIN_ARRAY = {
-  {PB_8,  9}, // Rx Pin: PB_5, AF9
-  //{PB_12, 9}  // Rx Pin: PB_12, AF9
+  {PB_8,  9} // Rx Pin: PB_5, AF9
+  //,{PB_8, 9}  // Rx Pin: PB_12, AF9
 } ;
 
 //----------------------------------------------------------------------------------------
@@ -122,3 +122,4 @@ void ACAN_FDCAN2_IT1_IRQHandler (void) {
 }
 
 //----------------------------------------------------------------------------------------
+//*/
