@@ -1,4 +1,4 @@
-## CANFD Library for Arduino Giga R1 -- and Portenta H7 with only one channel (can1 on the breakoutbord)
+## CANFD Library for Portenta H7 -- only one channel available (can1 on the breakoutbord)
 
 ### Compatibility with other ACAN libraries
 
